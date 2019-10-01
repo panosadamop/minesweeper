@@ -4,8 +4,8 @@
       <div class="minesweeper-bombcount">
         {{bombCount}}
       </div>
-      <a href="#" @click.prevent="initGrid">
-        &#9786;
+      <a class="btn btn-sm btn-block btn-secondary"  href="#" @click.prevent="initGrid">
+        Νέο Παιχνίδι
       </a>
       <minesweeper-timer class="minesweeper-timer" :finished="finished"></minesweeper-timer>
     </div>

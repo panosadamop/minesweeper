@@ -3,12 +3,12 @@
     <div class="container py-3">
       <h1>Vue Minesweeper</h1>
       <p class="lead">
-        A simple minesweeper game for 1st Athens Meetup!
+        Ναρκαλιευτής σε VueJS 1st Athens Meetup!
       </p>
     </div>
     <div class="bg-light">
       <div class="container py-3">
-        <h3>Play a game</h3>
+        <h3>Έναρξη παιχνιδιού</h3>
         <div class="row">
           <div class="col-12 col-md-4 py-3">
             <router-link href="#" class="btn btn-lg btn-block btn-success" :to="{
@@ -19,12 +19,11 @@
                 bombs: 10,
               }}">
               <i class="fa fa-baby"></i>
-              Beginner
+              Αρχάριος (9x9)
             </router-link>
-            <p class="pt-3">A simple 9x9 beginner game</p>
           </div>
           <div class="col-12 col-md-4 py-3">
-            <router-link href="#" class="btn btn-lg btn-block btn-success" :to="{
+            <router-link href="#" class="btn btn-lg btn-block btn-warning" :to="{
               name: 'game',
               params: {
                 rows: 16,
@@ -32,12 +31,11 @@
                 bombs: 40,
               }}">
               <i class="fa fa-user"></i>
-              Intermediate
+             Προχωρημένος (16x16)
             </router-link>
-            <p class="pt-3">Intermediate, a 16x16 board</p>
           </div>
           <div class="col-12 col-md-4 py-3">
-            <router-link href="#" class="btn btn-lg btn-block btn-success" :to="{
+            <router-link href="#" class="btn btn-lg btn-block btn-danger" :to="{
               name: 'game',
               params: {
                 rows: 16,
@@ -45,9 +43,8 @@
                 bombs: 99,
               }}">
               <i class="fa fa-user-astronaut"></i>
-              Expert
+              Αγριεμένος (16x99 με 99 βόμβες)
             </router-link>
-            <p class="pt-3">For the die hards, 16x99 with 99 bombs</p>
           </div>
         </div>
       </div>
@@ -55,29 +52,29 @@
 
     <form class="bg-light py-3" @submit="updateRoute">
       <div class="container">
-        <h3>Or start a custom game</h3>
+        <h3>Φτιάξε το δικό σου ταμπλώ</h3>
         <div class="row">
           <div class="form-group col-12 col-md-4">
-            <label for="input-rows">Rows</label>
+            <label for="input-rows">Γραμμές</label>
             <input type="number" v-model.number="rows" class="form-control"
                    min="1" max="50" id="input-rows">
           </div>
           <div class="form-group col-12 col-md-4">
-            <label for="input-cols">Cols</label>
+            <label for="input-cols">Στήλες</label>
             <input type="number" v-model.number="cols" class="form-control"
                    min="1" max="50" id="input-cols">
           </div>
           <div class="form-group col-12 col-md-4">
-            <label for="input-bombs">Bombs</label>
+            <label for="input-bombs">Βόμβες</label>
             <input type="number" v-model.number="bombs" class="form-control"
                    min="1" max="99" id="input-bombs">
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-danger">
+            <button type="submit" class="btn btn-primary btn-sm">
               <i class="fa fa-dice"></i>
-              Play
+              Πάιξε τώρα
             </button>
           </div>
         </div>
